@@ -20,6 +20,9 @@ public class FontManager {
 			+ "fontawesome-webfont.ttf";
 
 	public static Typeface getTypeface(Context context) {
+		if (FONTAWESOME == null) {
+			return null;
+		}
 		return Typeface.createFromAsset(context.getAssets(), FONTAWESOME);
 	}
 
